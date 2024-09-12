@@ -25,7 +25,6 @@
 		"format:write": "nx format:write",
 		"ng": "nx",
 		"postinstall": "npx rimraf node_modules/node-sass && npm run set-base",
-		"prepare": "husky install",
 		"set-base": "node ./tools/nx-resolver/resolveBase.js",
 		"test-vr": "start-server-and-test 'nx run storybook-bundle:build-storybook --skip-nx-cache && http-server dist/storybook/storybook-bundle -s -p 4400' 4400 \"docker run --rm --name playwright-vr -p 4400:4400 -v $(pwd):/work/ -w /work/ mcr.microsoft.com/playwright:v1.39.0-focal npx playwright test ${FILESPATH} --config=playwright.config.ts\"",
 		"test-vr-update": "start-server-and-test 'nx run storybook-bundle:build-storybook --skip-nx-cache && http-server dist/storybook/storybook-bundle -s -p 4400' 4400 \"docker run --rm --name playwright-vr -p 4400:4400 -v $(pwd):/work/ -w /work/ mcr.microsoft.com/playwright:v1.39.0-focal npx playwright test ${FILESPATH} --config=playwright.config.ts --update-snapshots\"",
